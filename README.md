@@ -1,0 +1,2 @@
+# .conf
+My config file
