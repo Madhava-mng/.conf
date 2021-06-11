@@ -19,6 +19,8 @@ setopt PROMPT_SUBST
 
 export PS1='%(?..%F{red} ✘ )${vcs_info_msg_0_}%F{98,98,98}%C %F{green}•>%F{white} '
 
+
+
 echo "
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
@@ -28,6 +30,14 @@ RPROMPT=\$vcs_info_msg_0_
 #PROMPT=\$vcs_info_msg_0_'%# '
 zstyle ':vcs_info:git:*' formats '%F{yellow}(%b)%F{white}'
 " > /dev/null
+
+alias tree='tree -C'
+alias grep='grep --color'
+alias ls='ls --color'
+alias ll='ls -l --color'
+alias la='ls -lA --color'
+
+
 bindkey "e[1~" beginning-of-line
 bindkey "e[4~" end-of-line
 bindkey "e[5~" beginning-of-history
